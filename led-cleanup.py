@@ -20,6 +20,6 @@ GPIO.setup(32, GPIO.OUT)
 GPIO.setup(36, GPIO.OUT)
 GPIO.setup(38, GPIO.OUT)
 
-GPIO.setup(12, GPIO.OUT)
+# GPIO.setup(40, GPIO.OUT)
 
 GPIO.cleanup()
