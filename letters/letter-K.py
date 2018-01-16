@@ -76,7 +76,7 @@ class ledK_object(object):
 
     def playmusic():
         print("play music")
-        os.system("aplay music/koreaHB.wav")
+        os.system("aplay ~/Bian-yuan-ren-candles/music/koreaHB.wav")
 
     def callback(channel):
         thd.start()

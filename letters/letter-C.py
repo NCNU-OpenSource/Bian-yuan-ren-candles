@@ -79,7 +79,7 @@ class ledC_object(object):
 
     def playmusic():
         print("play music")
-        os.system("aplay music/chineseHB.wav")
+        os.system("aplay ~/Bian-yuan-ren-candles/music/chineseHB.wav")
 
     def callback(channel):
         thd.start()

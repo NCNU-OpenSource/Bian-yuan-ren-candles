@@ -76,7 +76,7 @@ class ledE_object(object):
 
     def playmusic():
         print("play music")
-        os.system("aplay music/englishHB.wav")
+        os.system("aplay ~/Bian-yuan-ren-candles/music/englishHB.wav")
 
     def callback(channel):
         thd.start()

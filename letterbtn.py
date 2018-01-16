@@ -17,17 +17,17 @@ class letterbnt_object(object):
             if input_state == False:
                 self.click = self.click + 1
                 if self.click == 1:
-    	            os.system("python led-cleanup.py")
-    	            os.system("python letters/letter-C.py")
+    	            os.system("python ~/Bian-yuan-ren-candles/led-cleanup.py")
+    	            os.system("python ~/Bian-yuan-ren-candles/letters/letter-C.py")
                 if self.click == 2:
-                    os.system("python led-cleanup.py")
-    	            os.system("python letters/letter-E.py")
+    	            os.system("python ~/Bian-yuan-ren-candles/led-cleanup.py")
+    	            os.system("python ~/Bian-yuan-ren-candles/letters/letter-E.py")
                 if self.click == 3:
-    	            os.system("python led-cleanup.py")
-    	            os.system("python letters/letter-J.py")
+    	            os.system("python ~/Bian-yuan-ren-candles/led-cleanup.py")
+    	            os.system("python ~/Bian-yuan-ren-candles/letters/letter-J.py")
                 if self.click == 4:
-    	            os.system("python led-cleanup.py")
-                    os.system("python letters/letter-K.py")
+    	            os.system("python ~/Bian-yuan-ren-candles/led-cleanup.py")
+    	            os.system("python ~/Bian-yuan-ren-candles/letters/letter-K.py")
                     self.click = 0
             time.sleep(0.2)
 
