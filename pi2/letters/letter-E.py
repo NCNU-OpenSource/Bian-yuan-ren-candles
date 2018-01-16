@@ -2,11 +2,9 @@
 import RPi.GPIO as GPIO
 import time
 import sys
-import os
-import threading
-import signal
+import os, threading, signal
 
-class ledC_object(object):
+class ledE_object(object):
   def __init__(self):
     #define Raspberry Pi GPIO number
     self.sleeptime=0.001
@@ -69,21 +67,20 @@ class ledC_object(object):
 
   def demo(self):
     def close(channel):
-        os.system("python led-cleanup.py")
+        os.system("python ~/Bian-yuan-ren-candles/led-cleanup.py")
         for line in os.popen("ps ax | grep wav | grep -v grep"):
             fields = line.split()
             pid = fields[0]
             os.kill(int(pid), signal.SIGKILL)
-        print("close")
         sys.exit()
 
     def playmusic():
         print("play music")
-        os.system("aplay ~/Bian-yuan-ren-candles/music/chineseHB.wav")
+        os.system("aplay ~/Bian-yuan-ren-candles/pi2/music/englishHB.wav")
 
     def callback(channel):
         thd.start()
-    
+
     thd = threading.Thread(target=playmusic, name='thd1')
 
     GPIO.add_event_detect(self.buttonMusic, GPIO.RISING, callback=callback)
@@ -92,18 +89,6 @@ class ledC_object(object):
     while 1:
       self.clear()
       GPIO.output(self.ROW1, GPIO.HIGH)
-      GPIO.output(self.COL1, GPIO.HIGH)
-      GPIO.output(self.COL2, GPIO.HIGH)
-      GPIO.output(self.COL3, GPIO.LOW)
-      GPIO.output(self.COL4, GPIO.LOW)
-      GPIO.output(self.COL5, GPIO.LOW)
-      GPIO.output(self.COL6, GPIO.LOW)
-      GPIO.output(self.COL7, GPIO.HIGH)
-      GPIO.output(self.COL8, GPIO.HIGH)
-      time.sleep(self.sleeptime)
-
-      self.clear()
-      GPIO.output(self.ROW2, GPIO.HIGH)
       GPIO.output(self.COL1, GPIO.HIGH)
       GPIO.output(self.COL2, GPIO.LOW)
       GPIO.output(self.COL3, GPIO.LOW)
@@ -115,10 +100,22 @@ class ledC_object(object):
       time.sleep(self.sleeptime)
 
       self.clear()
+      GPIO.output(self.ROW2, GPIO.HIGH)
+      GPIO.output(self.COL1, GPIO.HIGH)
+      GPIO.output(self.COL2, GPIO.LOW)
+      GPIO.output(self.COL3, GPIO.HIGH)
+      GPIO.output(self.COL4, GPIO.HIGH)
+      GPIO.output(self.COL5, GPIO.HIGH)
+      GPIO.output(self.COL6, GPIO.HIGH)
+      GPIO.output(self.COL7, GPIO.HIGH)
+      GPIO.output(self.COL8, GPIO.HIGH)
+      time.sleep(self.sleeptime)
+
+      self.clear()
       GPIO.output(self.ROW3, GPIO.HIGH)
       GPIO.output(self.COL1, GPIO.HIGH)
       GPIO.output(self.COL2, GPIO.LOW)
-      GPIO.output(self.COL3, GPIO.LOW)
+      GPIO.output(self.COL3, GPIO.HIGH)
       GPIO.output(self.COL4, GPIO.HIGH)
       GPIO.output(self.COL5, GPIO.HIGH)
       GPIO.output(self.COL6, GPIO.HIGH)
@@ -131,10 +128,10 @@ class ledC_object(object):
       GPIO.output(self.COL1, GPIO.HIGH)
       GPIO.output(self.COL2, GPIO.LOW)
       GPIO.output(self.COL3, GPIO.LOW)
-      GPIO.output(self.COL4, GPIO.HIGH)
-      GPIO.output(self.COL5, GPIO.HIGH)
-      GPIO.output(self.COL6, GPIO.HIGH)
-      GPIO.output(self.COL7, GPIO.HIGH)
+      GPIO.output(self.COL4, GPIO.LOW)
+      GPIO.output(self.COL5, GPIO.LOW)
+      GPIO.output(self.COL6, GPIO.LOW)
+      GPIO.output(self.COL7, GPIO.LOW)
       GPIO.output(self.COL8, GPIO.HIGH)
       time.sleep(self.sleeptime)
 
@@ -142,7 +139,7 @@ class ledC_object(object):
       GPIO.output(self.ROW5, GPIO.HIGH)
       GPIO.output(self.COL1, GPIO.HIGH)
       GPIO.output(self.COL2, GPIO.LOW)
-      GPIO.output(self.COL3, GPIO.LOW)
+      GPIO.output(self.COL3, GPIO.HIGH)
       GPIO.output(self.COL4, GPIO.HIGH)
       GPIO.output(self.COL5, GPIO.HIGH)
       GPIO.output(self.COL6, GPIO.HIGH)
@@ -154,6 +151,18 @@ class ledC_object(object):
       GPIO.output(self.ROW6, GPIO.HIGH)
       GPIO.output(self.COL1, GPIO.HIGH)
       GPIO.output(self.COL2, GPIO.LOW)
+      GPIO.output(self.COL3, GPIO.HIGH)
+      GPIO.output(self.COL4, GPIO.HIGH)
+      GPIO.output(self.COL5, GPIO.HIGH)
+      GPIO.output(self.COL6, GPIO.HIGH)
+      GPIO.output(self.COL7, GPIO.HIGH)
+      GPIO.output(self.COL8, GPIO.HIGH)
+      time.sleep(self.sleeptime)
+
+      self.clear()
+      GPIO.output(self.ROW7, GPIO.HIGH)
+      GPIO.output(self.COL1, GPIO.HIGH)
+      GPIO.output(self.COL2, GPIO.LOW)
       GPIO.output(self.COL3, GPIO.LOW)
       GPIO.output(self.COL4, GPIO.LOW)
       GPIO.output(self.COL5, GPIO.LOW)
@@ -161,23 +170,11 @@ class ledC_object(object):
       GPIO.output(self.COL7, GPIO.LOW)
       GPIO.output(self.COL8, GPIO.HIGH)
       time.sleep(self.sleeptime)
-
-      self.clear()
-      GPIO.output(self.ROW7, GPIO.HIGH)
-      GPIO.output(self.COL1, GPIO.HIGH)
-      GPIO.output(self.COL2, GPIO.HIGH)
-      GPIO.output(self.COL3, GPIO.LOW)
-      GPIO.output(self.COL4, GPIO.LOW)
-      GPIO.output(self.COL5, GPIO.LOW)
-      GPIO.output(self.COL6, GPIO.LOW)
-      GPIO.output(self.COL7, GPIO.HIGH)
-      GPIO.output(self.COL8, GPIO.HIGH)
-      time.sleep(self.sleeptime)
       
     self.clear()    
 
 def main():
-    ledobj=ledC_object()
+    ledobj=ledE_object()
     ledobj.demo()
 
 if __name__ == "__main__":
