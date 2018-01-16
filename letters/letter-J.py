@@ -77,7 +77,7 @@ class ledJ_object(object):
 
     def playmusic():
         print("play music")
-        os.system('aplay ../music/japanHB.wav')
+        os.system("aplay music/japanHB.wav")
 
     def callback(channel):
         thd.start()
