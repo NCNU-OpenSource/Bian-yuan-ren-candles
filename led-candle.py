@@ -68,7 +68,6 @@ class led87_object(object):
     def callback(channel):
       print "sound clap!"
       self.clear()
-      # os.system("aplay claps.wav")
       sys.exit()
       # if GPIO.input(channel):
       #   print "Sound Detected!"
