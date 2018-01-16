@@ -11,5 +11,5 @@ while True:
     if input_state == False:
         print('Button Pressed')
         os.system("python led-candle.py")
-        os.system("aplay claps.wav")
+        os.system("aplay music/claps.wav")
         time.sleep(0.2)

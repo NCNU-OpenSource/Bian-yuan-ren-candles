@@ -18,16 +18,16 @@ class letterbnt_object(object):
                 self.click = self.click + 1
                 if self.click == 1:
     	            os.system("python led-cleanup.py")
-    	            os.system("python letter-C.py")
+    	            os.system("python letters/letter-C.py")
                 if self.click == 2:
                     os.system("python led-cleanup.py")
-    	            os.system("python letter-E.py")
+    	            os.system("python letters/letter-E.py")
                 if self.click == 3:
     	            os.system("python led-cleanup.py")
-    	            os.system("python letter-J.py")
+    	            os.system("python letters/letter-J.py")
                 if self.click == 4:
     	            os.system("python led-cleanup.py")
-                    os.system("python letter-K.py")
+                    os.system("python letters/letter-K.py")
                     self.click = 0
             time.sleep(0.2)
 

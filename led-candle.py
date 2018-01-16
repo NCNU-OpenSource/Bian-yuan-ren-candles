@@ -2,6 +2,7 @@
 import RPi.GPIO as GPIO
 import time
 import sys
+import os
 
 class led87_object(object):
   def __init__(self):
@@ -67,6 +68,7 @@ class led87_object(object):
     def callback(channel):
       print "sound clap!"
       self.clear()
+      # os.system("aplay claps.wav")
       sys.exit()
       # if GPIO.input(channel):
       #   print "Sound Detected!"
