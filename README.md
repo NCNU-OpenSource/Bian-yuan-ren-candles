@@ -63,7 +63,7 @@ step 3. 按第三顆按鈕播放生日快樂歌
 step 4. 唱完後，對著蠟燭旁的麥克風吹熄蠟燭，音響會播放出鼓掌聲，猶如許多人為你慶生
 
 ## 工作分配
-裝置連接：
+設備組裝：
 
 程式撰寫：
 
@@ -72,15 +72,11 @@ step 4. 唱完後，對著蠟燭旁的麥克風吹熄蠟燭，音響會播放出
 顧問指導團：yy、展瑩、天麟、老大、蛋蛋、班代大大、公主殿下
 
 ## 參考資料
-LED教學
+LED教學: http://ezzep.blogspot.tw/2012/12/RaspberryPi-5x7LED.html
 
-Sound Senser教學</br>
-* http://www.instructables.com/id/Sound-Sensor-Raspberry-Pi/ 
+Sound Senser教學: http://www.instructables.com/id/Sound-Sensor-Raspberry-Pi/ 
 
-Button教學</br>
-* http://razzpisampler.oreilly.com/ch07.html 
-
-GPIO控制教學</br>
+Button教學: http://razzpisampler.oreilly.com/ch07.html 
 
 劇本link:https://goo.gl/ZCV4pX
 
