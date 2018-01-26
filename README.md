@@ -55,13 +55,11 @@ costdown:使用寄存器可以使用一台pi與價格低廉的喇叭，可以大
 
 ## 操作前提
 
-  # 更改/pi1/sshpi.sh的ip位置
-  
-  $ ssh pi@{ip} >/dev/null 2>&1 &
+    # 更改/pi1/sshpi.sh的ip位置
+    $ ssh pi@{ip} >/dev/null 2>&1 &
 
-  # 啟動設備
-  
-  $python start.py
+    # 啟動設備
+    $python start.py
 
 
 ## 實際操作
