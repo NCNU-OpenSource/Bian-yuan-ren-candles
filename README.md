@@ -53,13 +53,18 @@ costdown:使用寄存器可以使用一台pi與價格低廉的喇叭，可以大
 
 * RPI.GPIO 函式庫
 
-## 實作過程
+## 操作前提
 
-更改ip連線
-bash-profile
+  # 更改/pi1/sshpi.sh的ip位置
+  
+  $ ssh pi@{ip} >/dev/null 2>&1 &
+
+  # 啟動設備
+  
+  $python start.py
 
 
-## 操作教學
+## 實際操作
 step 1. 按第一顆控制蠟燭面板按鈕，點燃蠟燭，這邊會連動顯示生日歌曲選擇的面板，面板會顯示中文歌（Ｃ）代號，依序歌曲選擇為Ｃ->Ｅ->Ｊ->Ｋ
 
 step 2. 按第二顆按鈕選想聽的生日歌語言
@@ -72,12 +77,9 @@ step 4. 唱完後，對著蠟燭旁的麥克風吹熄蠟燭，音響會播放出
 ![pic](https://github.com/NCNU-OpenSource/Bian-yuan-ren-candles/blob/master/1061LSA%E6%9C%9F%E6%9C%AB_bb.jpg)
 
 ## 工作分配
-接版版
-
-coding
-
-
-
+接版版：怡丰，育柔，展瑩，漢廷
+coding：怡丰，育柔，展瑩，漢廷
+文件、Slide：怡丰，育柔，漢廷
 顧問指導團：yy、展瑩、天麟、老大、蛋蛋、班代大大、公主殿下
 
 ## 參考資料
