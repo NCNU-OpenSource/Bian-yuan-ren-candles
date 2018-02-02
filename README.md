@@ -70,6 +70,10 @@ step 3. 按第三顆按鈕播放生日快樂歌
 
 step 4. 唱完後，對著蠟燭旁的麥克風吹熄蠟燭，音響會播放出鼓掌聲，猶如許多人為你慶生
 
+影片傳送門：https://youtu.be/jw_KOoq0gDc
+
+
+
 ## 電路圖
 ![pic](https://github.com/NCNU-OpenSource/Bian-yuan-ren-candles/blob/master/1061LSA%E6%9C%9F%E6%9C%AB_bb.jpg)
 
